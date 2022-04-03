@@ -1,0 +1,100 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+      <div class="item">
+        <a>
+          <img src="../../../assets/all-products.jpg" id="all-products" (click)="showAllProducts()" >
+        </a>
+        <h5><b>All Products</b></h5>
+      </div>
+      <div class="item">
+        <a>
+          <img src="../../../assets/electronics.jpg" id="electronics" (click)="showElectronics()">
+        </a>
+        <h5><b>Electronics</b></h5>
+      </div>
+      <div class="item">
+        <a>
+          <img src="../../../assets/fashion.jpg" id="fashoin" (click)=" showFashion()">
+        </a>
+        <h5><b>Fashoin</b></h5>
+      </div>
+      <div class="item">
+        <a>
+          <img src="../../../assets/jewilery.jpg" id="jewelery" (click)="showJewelery()">
+        </a>
+        <h5><b>Jewelery</b></h5>
+      </div>
+  </div>
+</div>
+
+
+<section>
+
+  <div class="container all-products" >
+    <div class="row">
+        <ng-container *ngFor="let prod of productList ; let i = index">
+          <div class="col-md-3">
+            <div class="card" [id]="prod.category" appChange>
+              <img [src]="prod.image">
+              <h5>{{prod.title}}</h5>
+              <p>{{prod.description}}</p>
+              <p><strong>Price : {{prod.price}} </strong> $</p>
+              <button class="btn btn-primary" (click)="addToCart(prod)">Add to cart</button>
+            </div>
+          </div>
+        </ng-container>
+    </div>
+  </div>
+
+
+  <div class="container electronics d-none">
+    <div class="row">
+        <ng-container *ngFor="let e of electronics; let i = index">
+          <div class="col-md-3">
+            <div class="card" appChange>
+              <img [src]="e.image">
+              <h5>{{e.title}}</h5>
+              <p>{{e.description}}</p>
+              <p><strong>Price : {{e.price}} </strong> $</p>
+              <button class="btn btn-primary" (click)="addToCart(e)">Add to cart</button>
+            </div>
+          </div>
+        </ng-container>
+    </div>
+  </div>
+
+  <div class="container fashions d-none">
+    <div class="row">
+        <ng-container *ngFor="let e of fashions; let i = index">
+          <div class="col-md-3">
+            <div class="card" appChange>
+              <img [src]="e.image">
+              <h5>{{e.title}}</h5>
+              <p>{{e.description}}</p>
+              <p><strong>Price : {{e.price}} </strong> $</p>
+              <button class="btn btn-primary" (click)="addToCart(e)">Add to cart</button>
+            </div>
+          </div>
+        </ng-container>
+    </div>
+  </div>
+
+  <div class="container jewelery d-none">
+    <div class="row">
+        <ng-container *ngFor="let e of jewelery; let i = index">
+          <div class="col-md-3">
+            <div class="card" appChange>
+              <img [src]="e.image">
+              <h5>{{e.title}}</h5>
+              <p>{{e.description}}</p>
+              <p><strong>Price : {{e.price}} </strong> $</p>
+              <button class="btn btn-primary" (click)="addToCart(e)">Add to cart</button>
+            </div>
+          </div>
+        </ng-container>
+    </div>
+  </div>
+
+</section>
+
+

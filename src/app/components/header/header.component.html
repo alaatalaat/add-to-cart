@@ -1,0 +1,22 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-primary shadow-sm">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" style="color:#fff;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-3" id="navbarSupportedContent">
+        <a class="navbar-brand" href="#">
+          <strong>
+            <i style="font-size:20px;" class="fas fa-shipping-fast text-white"></i>
+            <span>Tawsel</span>
+          </strong>
+        </a>
+      </div>
+      <i class="fas fa-cart-arrow-down mx-2 mt-3 text-white" mat-raised-button color="primary"
+      [matBadge]="totalItem" matBadgePosition="after" matBadgeColor="accent" routerLink="cart"></i>
+
+
+    </div>
+  </nav>
+</header>
